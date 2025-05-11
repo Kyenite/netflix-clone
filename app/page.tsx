@@ -1,7 +1,17 @@
 import { ChevronRight, Languages } from "lucide-react";
+import Cards from "@components/Cards";
+
+const CardsData = [
+  "https://static1.srcdn.com/wordpress/wp-content/uploads/2023/04/naruto-shippuden-tv-series-poster.jpg?q=50&fit=crop&w=265&h=392&dpr=1.5",
+  "https://images.justwatch.com/poster/324425000/s718/when-life-gives-you-tangerines.jpg",
+  "https://vignette.wikia.nocookie.net/dubbing9585/images/d/d2/My_Hero_Academia_Heroes_Rising.jpg/revision/latest?cb=20200419060653",
+  "https://tse4.mm.bing.net/th/id/OIP.AxvDN0Eqsm-0DNsPmpFm9AHaJQ?cb=iwc2&rs=1&pid=ImgDetMain",
+  "https://m.media-amazon.com/images/M/MV5BMTc0NTUwMTU5OV5BMl5BanBnXkFtZTcwNjAwNzQzMw@@._V1_.jpg"
+]
 
 export default function Home() {
   return (
+    <>
     <section className="bg-[url('https://www.okynemedialab.com/wp-content/uploads/2019/11/netflix-background-50-Black-1080x608.jpg')] bg-opacity-40 bg-cover bg-center">
       <div className="flex items-center justify-between p-4">
         <span className="font-bold text-2xl text-red-600">NETFLIX</span>
@@ -34,5 +44,15 @@ export default function Home() {
         </div>
       </div>
     </section>
+    <section className="w-full relative bg-gray-800 pt-10 py-15">
+      <div className="w-full border-t-2 py-4 rounded-t-full max-h-10 absolute top-[-20] bg-gray-800 border-red-600 h-full"></div>
+      <div className="trending w-full h-fit px-10">
+        <h1 className="font-medium text-2xl">Trending Now</h1>
+        <div className="p-4 ps-0 pe-0 flex flex-row w-full items-center space-x-4">
+          <Cards imgUrl={CardsData} />
+        </div>
+      </div>
+    </section>
+    </>
   );
 }
